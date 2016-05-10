@@ -1,6 +1,3 @@
-import com.typesafe.sbt.SbtAspectj.{Aspectj, aspectjSettings, AspectjKeys}
+import com.typesafe.sbt.SbtAspectj.aspectjSettings
 
-aspectjSettings ++ Seq(
-  javaOptions in run <++= AspectjKeys.weaverOptions in Aspectj,
-  fork in run := true
-)
+aspectjSettings
